@@ -25,3 +25,27 @@ Este proyecto es una API REST construida con Laravel que permite obtener tasas d
    ```bash
    git clone https://github.com/tu-usuario/currency_converter_laravel_api.git
    cd currency_converter_laravel_api
+
+2. Instala las dependencias:
+   ```bash
+   composer install
+   
+3. Copia el archivo .env:
+   ```bash
+   cp .env.example .env
+
+4. Configura tu archivo .env con tus datos de base de datos y tu API key de https://www.exchangerate-api.com/:
+  ```bash
+   EXCHANGE_API_KEY=tu_clave_aqui
+
+5. Ejecuta las migraciones (si las hay):
+   ```bash
+   php artisan migrate
+
+6. Lanza el servidor de desarrollo:
+   php artisan serve
+
+
+
+
+
