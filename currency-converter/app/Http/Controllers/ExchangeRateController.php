@@ -14,10 +14,8 @@ class ExchangeRateController extends Controller
         $this->exchangeRateService = $exchangeRateService;
     }
 
-    public function getExchangeRate(Request $request, $base, $target)
+    public function getExchangeRate($base, $target, $amount = null)
     {
-        $amount = $request->query('amount'); // Obtener el monto opcional desde la query string
-
         $rateData = $this->exchangeRateService->getExchangeRate($base, $target, $amount);
 
         return response()->json($rateData);
